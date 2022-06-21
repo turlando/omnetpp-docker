@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export LANG=en_US.UTF-8
+
+PREFIX=/opt/omnetpp
+IDE="$PREFIX/ide/opp_ide"
+SAMPLES="$PREFIX/samples"
+
+cd $PREFIX
+. ./setenv
+cd -
+
+$IDE --launcher.openFile "$@"
