@@ -12,6 +12,7 @@ run:
 	$(DOCKER) run                                \
 	    --rm                                     \
 	    -u $(shell id -u):$(shell id -g)         \
+	    --ipc=host                               \
 	    -v $(HOME)/.Xauthority:/root/.Xauthority \
 	    -v /tmp/.X11-unix:/tmp/.X11-unix         \
 	    -v $(WORKSPACE):/workspace               \
